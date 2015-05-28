@@ -1,0 +1,21 @@
+{
+  "name": "basyt-cli",
+  "version": "0.1.0",
+  "description": "package to enable basyt entities in command line applications",
+  "main": "basyt-cli.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ytlabs/basyt-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ytlabs/basyt/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Kamil Sulubulut",
+    "url": "http://github.com/kokeksibir/"
+  },
+  "dependencies": {
+    "lodash": "^3.8.0"
+  }
+}
