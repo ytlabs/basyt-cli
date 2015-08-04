@@ -28,6 +28,9 @@ function Basyt() {
     var config = GLOBAL.APP_CONFIG;
     var entitiesFolder = config.basyt.entities_folder || config.base_folder + 'entities/';
 
+    var packageFile = config.package_file || config.base_folder + 'package.json';
+    var projectInfo = require(packageFile);
+
     //setup properties
     this.collections = {};
     this.ErrorDefinitions = {
@@ -50,7 +53,7 @@ function Basyt() {
     };
 
     //Initialize Auth
-    if (config.basyt.enable_auth === true && !_.isUndefined(config.basyt.auth)) {
+    /*if (config.basyt.enable_auth === true && !_.isUndefined(config.basyt.auth)) {
         log.info('Installed Auth');
         var userEntity, userSettingsEntity, userCollection;
         userCollection = require('basyt-storage-collection');
@@ -58,7 +61,7 @@ function Basyt() {
         userSettingsEntity = require('./user_settings');
         this.collections['user'] = new Collection(userEntity, 'user');
         this.collections['user_settings'] = new Collection(userSettingsEntity, 'user_settings');
-    }
+    }*/
 
     //Import entities
     if (fs.existsSync(entitiesFolder)) {
