@@ -16,6 +16,7 @@
     "url": "http://github.com/kokeksibir/"
   },
   "dependencies": {
+    "bunyan": "^1.4.0",
     "lodash": "^3.8.0"
   }
 }
